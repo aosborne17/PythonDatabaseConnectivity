@@ -23,7 +23,6 @@ cursor = connections.cursor()
 print(connections)
 print(cursor)
 
-query_result = cursor.execute('SELECT * FROM Products')
 
 print("Printing query_result object:", query_result)
 
@@ -38,7 +37,5 @@ print(rows[1]) # this would collect from the second column 'product name' in thi
 # note if we are on the second fetch, after this we would move to the 32nd position
 rows = query_result.fetchmany(30)
 
-for row in rows:
-    print(row)
 
 

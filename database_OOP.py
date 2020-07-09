@@ -19,7 +19,7 @@ class database_OOP:
     def establish_connection(self):
         connections = ('DRIVER={ODBC Driver 17 for SQL Server};'
                                      'SERVER='+self.server+';DATABASE='+self.database+';UID='+self.username+';PWD='+ self.password)
-        # return connections
+
 
         try:
             with pyodbc.connect(connections, timeout=5) as connection:
@@ -29,14 +29,23 @@ class database_OOP:
         except pyodbc.InterfaceError:
             print("Invalid connection to DB interface")
         else:
-            return connection
+            cursor = connection.cursor()
+            return cursor
 
     # This is specifically for creating the cursor
-    def create_cursor(self, connection):
-        cursor = connection.cursor()
-        return connection.cursor
+    # def create_cursor(self, connection):
+    #     cursor = connection.cursor()
+    #     return connection.cursor
 
     # This method is strictly for executing SQL commands
-    def execute_sql(self, sql_command, connection, user_input):
-        pass
+    def execute_sql(self):
+        object = database_OOP(self.server, self.database, self.username, self.password)
+
+        Customers_ID = []
+        Customer_Name = []
+
+        for row in rows:
+            print(row)
+
+
 

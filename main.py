@@ -1,4 +1,5 @@
 from database_OOP import database_OOP
+from queries_OOP import Check_queries
 
 """
 Find out how to encode the password in Python
@@ -9,7 +10,6 @@ username = 'SA'
 password = 'Passw0rd2018'
 
 
-object = database_OOP(server, database, username, password)
+command1 = Check_queries()
+command1.execute_commands()
 
-print(object.establish_connection())
-object.create_cursor(connection)
