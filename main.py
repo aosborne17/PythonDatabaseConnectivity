@@ -11,5 +11,6 @@ password = 'Passw0rd2018'
 
 
 command1 = Check_queries()
-command1.execute_commands()
+# command1.execute_commands()
+command1.execute_second_command()
 
